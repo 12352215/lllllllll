@@ -1,13 +1,9 @@
 let s = 0
 input.onButtonPressed(Button.A, function () {
-    powerbrick.MotorRun(powerbrick.Motors.M1, -193)
-    basic.pause(200)
-    powerbrick.MotorStop(powerbrick.Motors.M1)
+	
 })
 input.onButtonPressed(Button.B, function () {
-    powerbrick.MotorRun(powerbrick.Motors.M1, -193)
-    basic.pause(200)
-    powerbrick.MotorStop(powerbrick.Motors.M1)
+	
 })
 basic.forever(function () {
     s = powerbrick.GC_Gesture()
@@ -30,10 +26,14 @@ basic.forever(function () {
 })
 basic.forever(function () {
     if (powerbrick.GC_Gesture() == 2) {
-    	
+        powerbrick.MotorRun(powerbrick.Motors.M1, -193)
+        basic.pause(200)
+        powerbrick.MotorStop(powerbrick.Motors.M1)
     }
     if (powerbrick.GC_Gesture() == 4) {
-    	
+        powerbrick.MotorRun(powerbrick.Motors.M1, -193)
+        basic.pause(200)
+        powerbrick.MotorStop(powerbrick.Motors.M1)
     }
 })
 basic.forever(function () {
